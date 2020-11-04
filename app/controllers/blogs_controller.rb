@@ -11,11 +11,20 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    respond_to do |format|
+        format.html
+        format.js
+    end
   end
 
   # GET /blogs/new
   def new
     @blog = Blog.new
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /blogs/1/edit
@@ -30,10 +39,10 @@ class BlogsController < ApplicationController
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
-        format.json { render :show, status: :created, location: @blog }
+        format.js
       else
         format.html { render :new }
-        format.json { render json: @blog.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -63,13 +72,14 @@ class BlogsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_blog
-      @blog = Blog.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def blog_params
-      params.require(:blog).permit(:title, :description, :image)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_blog
+    @blog = Blog.find_by(id: params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def blog_params
+    params.require(:blog).permit(:title, :description, :image)
+  end
 end

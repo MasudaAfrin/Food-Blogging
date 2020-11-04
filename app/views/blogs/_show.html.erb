@@ -1,0 +1,25 @@
+<div class="details">
+
+<div>
+  <p><%= blog.title %></p>
+</div>
+<div>
+  <p><%= blog.description %></p>
+</div>
+<!--<div>-->
+<%#image_tag %>
+<!--</div>-->
+<% if session[:user_id] %>
+  <%= link_to 'Edit', edit_blog_path(blog) %>
+  <%= link_to 'Back', display_index_url, remote: true %>
+<%#else %>
+  <%#= link_to 'Back', display_index_url, remote: true %>
+<%end %>
+
+<h2>Comments</h2>
+
+<%= render blog.comments %>
+
+<h2>Add Your Comment Here</h2>
+<%= render 'comments/form' %>
+</div>
