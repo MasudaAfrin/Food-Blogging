@@ -8,8 +8,12 @@
 <!--<div>-->
   <%#image_tag %>
 <!--</div>-->
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+<% if session[:user_id] %>
+  <%= link_to 'Edit', edit_blog_path(@blog) %> |
+  <%= link_to 'Back', blogs_path %>
+  <%else %>
+  <%= link_to 'Back', display_index_url %>
+<%end %>
 
 <h2>Comments</h2>
 
