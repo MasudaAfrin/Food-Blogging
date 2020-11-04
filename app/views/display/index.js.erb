@@ -1,3 +1,9 @@
-let details = document.querySelector(".details")
+details = document.querySelector(".details")
 console.log(details)
-details.innerHTML = "<%= j render 'display/index', blogs: @blogs %>"
+if(details != null) {
+    details.innerHTML = ''
+    details.innerHTML = "<%= j render 'display/index', blogs: @blogs %>"
+}
+else {
+    console.log("different page")
+}

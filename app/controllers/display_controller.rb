@@ -4,7 +4,7 @@ class DisplayController < ApplicationController
     @blogs = Blog.all
     respond_to do |format|
       format.html
-      format.js { render 'index', layout: false }
+      format.js
     end
   end
 end
