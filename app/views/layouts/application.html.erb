@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Oneapp</title>
+    <title>Cooking Blog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,13 @@
   </head>
 
   <body>
+  <header class= "main">
+    <%= image_tag 'cooking.svg', alt:'Cooking Blog' %>
+    <h1><%= @page_title %></h1>
+  </header>
+
+  <main class='<%= controller.controller_name %>'>
     <%= yield %>
+  </main>
   </body>
 </html>

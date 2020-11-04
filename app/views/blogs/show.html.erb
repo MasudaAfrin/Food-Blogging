@@ -10,3 +10,10 @@
 <!--</div>-->
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
+
+<h2>Comments</h2>
+
+<%= render @blog.comments %>
+
+<h2>Add Your Comment Here</h2>
+<%= render 'comments/form' %>
