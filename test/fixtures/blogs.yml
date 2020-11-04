@@ -4,8 +4,33 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+one:
+  title: Chocolate Moist Cake
+  description:
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Massa placerat duis ultricies lacus. Sed lectus vestibulum mattis ullamcorper
+    velit sed. Dictum fusce ut placerat orci nulla pellentesque.
+    Faucibus interdum posuere lorem ipsum.
+  image: cake.jpg
+
+
+two:
+  title: Donut
+  description:
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Massa placerat duis ultricies lacus. Sed lectus vestibulum mattis ullamcorper
+      velit sed. Dictum fusce ut placerat orci nulla pellentesque.
+      Faucibus interdum posuere lorem ipsum.
+  image: donut.jpg
+
+food:
+  title: Meat Delicious Pizza
+  description:
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Massa placerat duis ultricies lacus. Sed lectus vestibulum mattis ullamcorper
+      velit sed. Dictum fusce ut placerat orci nulla pellentesque.
+      Faucibus interdum posuere lorem ipsum.
+  image: pizza.jpg
