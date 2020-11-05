@@ -6,16 +6,11 @@
 <div>
   <p><%= blog.description %></p>
 </div>
-<!--<div>-->
-<%#image_tag %>
-<!--</div>-->
-<% if session[:user_id] %>
-  <%= link_to 'Edit', edit_blog_path(blog) %>
-  <%= link_to 'Back', display_index_url, remote: true %>
-<%#else %>
-  <%#= link_to 'Back', display_index_url, remote: true %>
-<%end %>
 
+  <%= link_to 'Home', display_index_url, remote: true %>
+  <%if session[:user_id] %>
+  <%= link_to 'Back', blogs_path, remote: true %>
+  <%end %>
 <h2>Comments</h2>
 
 <%= render blog.comments %>

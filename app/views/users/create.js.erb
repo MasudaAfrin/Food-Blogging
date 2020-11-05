@@ -1,0 +1,4 @@
+newUser = document.querySelector(".new-user")
+console.log(newUser)
+newUser.innerHTML = ''
+newUser.innerHTML = "<%= j render 'users/user_show', user: @user %>"

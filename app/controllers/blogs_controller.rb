@@ -1,19 +1,23 @@
 class BlogsController < ApplicationController
   skip_before_action :authorize, only: :show
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog, only: %i[show edit update destroy]
 
   # GET /blogs
   # GET /blogs.json
   def index
     @blogs = Blog.all
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
     respond_to do |format|
-        format.html
-        format.js
+      format.html
+      format.js
     end
   end
 
@@ -28,8 +32,7 @@ class BlogsController < ApplicationController
   end
 
   # GET /blogs/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /blogs
   # POST /blogs.json

@@ -1,4 +1,4 @@
 list = document.querySelector(".list")
 console.log(list)
 list.innerHTML = ''
-list.innerHTML = "<%= j render 'blogs/show', blog: @blog %>"
+list.innerHTML = "<%= j render 'blogs/blog_index', blogs: @blogs %>"
