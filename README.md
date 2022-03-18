@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is simple food blogging web based application.
 
-Things you may want to cover:
+**Dependencies**
 
-* Ruby version
+* Ruby version - 2.7.1
 
-* System dependencies
+* Rails version - 6.0.3.4
 
-* Configuration
+* Database - Postgresql
 
-* Database creation
+**Run**
+* bundle install
+* rails db:setup
+* rails db:migrate
+* rails s
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
